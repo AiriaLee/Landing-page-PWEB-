@@ -1,0 +1,99 @@
+:root {
+  --info-color: #0dcaf0;
+  --secondary-color: #6c757d;
+  --dark-color: #212529;
+  --pink-custom: #ff69b4; 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-color);
+  color: #f8f9fa; /* Light text color */
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+  background-color: rgba(33, 37, 41, 0.9);
+}
+
+.nav-link:hover {
+    color: var(--info-color) !important;
+}
+
+.home-img-size {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.text-pink-custom {
+    color: var(--pink-custom);
+}
+
+.contact-item-custom:hover {
+    background-color: rgba(13, 202, 240, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.doc-card {
+    border-radius: 0.75rem; 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(13, 202, 240, 0.2);
+}
+
+.doc-img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.doc-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.doc-card:hover img {
+    transform: scale(1.05);
+}
+
+.logo-letter {
+    opacity: 0; 
+    transition: opacity 0.1s ease-in; 
+    display: inline-block; 
+}
+
+#welcome-text-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid var(--info-color); 
+  animation: 
+      blink-caret .75s step-end infinite;
+  width: 0; 
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--info-color); }
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(13, 202, 240, 0.75), rgba(0, 0, 0, 0));
+}
+
+.message-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
